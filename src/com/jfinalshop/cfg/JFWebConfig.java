@@ -26,8 +26,8 @@ public class JFWebConfig extends JFinalConfig{
 	/**
      * 供Shiro插件使用。
      */
-	Routes routes;    
-	
+	Routes routes;
+
 	@Override
 	public void configConstant(Constants me) {
 		//SqlReporter.setLogger(true); 

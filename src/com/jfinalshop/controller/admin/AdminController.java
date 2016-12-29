@@ -52,13 +52,14 @@ public class AdminController extends BaseAdminController<Admin>{
 		setAttr("base", getRequest().getContextPath());
 		render("/admin/admin_login.html");
 	}
-		
+
 	@Clear
 	public void jqgrid() {
 		setAttr("base", getRequest().getContextPath());
+
 		render("/jqgrid.html");
 	}
-	
+
 	// 登录验证
 	@Clear
 	public void singIn() {
