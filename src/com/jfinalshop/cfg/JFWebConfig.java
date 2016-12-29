@@ -35,7 +35,8 @@ public class JFWebConfig extends JFinalConfig{
 		me.setErrorView(403, "403.html");
 		me.setError404View("404.html");
 		me.setError500View("500.html");
-		
+
+
 		// 加载数据库配置文件
         loadPropertyFile("jdbc.properties");
 		// 设定Beetl

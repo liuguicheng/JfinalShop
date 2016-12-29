@@ -29,7 +29,7 @@ body { min-width: 1090px; background: #fff; }
 .top-banner .module a { display: block; width: 1200px; height: 110px; }
 .top-banner .module .close { position: absolute; display: block; width: 23px; height: 23px; top: 80px; right: 0; background: url(../images/close.png) no-repeat; cursor: pointer; }
 /*网站头部公共区域 2F*/
-#site_nav { width: 100%; height: 32px; line-height: 32px; background-color: #f2f2f2; border-bottom: 1px solid #e5e5e5; color: #777; position: relative; z-index: 100001; }
+#site_nav { margin-top: -19px; width: 100%; height: 32px; line-height: 32px; background-color: #f2f2f2; border-bottom: 1px solid #e5e5e5; color: #777; position: relative; z-index: 100001; }
 #site_nav li { float: left; padding: 0 5px; }
 .site_nav_box{ width:1090px !important; margin:0 auto;}
 .dorpdown { position: relative; }
@@ -54,7 +54,7 @@ overflow: hidden; background: #fff; }
 #site-nav li { float: left; }
 /*3F*/
 .header { background:#fff;}
-.header_box{width:1090px !important; margin:0 auto;padding: 22px 0 22px 0; overflow:hidden;}
+.header_box{width:1090px !important; margin:0 auto;/*padding: 22px 0 22px 0;*/ overflow:hidden;}
 .logo { }
 .logo img { cursor: pointer; vertical-align: middle; left: 0; top: 10px; width: 276px; height: 60px; }
 /*搜索框*/
@@ -81,7 +81,7 @@ overflow: hidden; background: #fff; }
 .nav { height: 40px; border-bottom: 2px solid #333; background:#fff;}
 .nav_box{width:1090px !important; margin:0 auto;}
 .categorys { float: left; position: relative; z-index: 105; width: 190px; height: 40px; overflow: visible; }
-.categorys .dt a { display: block; width: 160px; height: 40px; font: 400 13px/40px "microsoft yahei"; padding-left: 30px; background: #2b2b2b; color: #fff; }
+.categorys .dt a { display: block; /*width: 160px;*/ height: 40px; font: 400 13px/40px "microsoft yahei"; padding-left: 30px; background: #2b2b2b; color: #fff; }
 .categorys .dt i.icon { position: absolute; width: 20px; height: 20px; left: 5px; top: 8px; }
 .icon-right { position: absolute; display: inline-block; width: 12px; height: 8px; background: url(../images/ecsc_icon.png) -263px -291px no-repeat; top: 11px; right: 10px; z-index: 1000; }
 .categorys .dt .icon-right { top: 15px; right: 20px; background-position: -263px -308px; }
@@ -89,16 +89,16 @@ overflow: hidden; background: #fff; }
 .categorys .dd { height: 401px; background: url(../images/navbg.png); border-top:2px solid #000;  z-index: 99; }
 /*2级导航*/
 .categorys .dd .cata-nav { position: relative; top: -1px; padding-top: 1px; height: 400px; }
-.categorys .dd .cata-nav .item { height: 30px; }
+.categorys .dd .cata-nav .item { /*height: 30px;*/ }
 .woman.categorys .dd .cata-nav .item { position: relative; }
 .categorys .dd .cata-nav .item-left { position: relative; }
 .categorys .item i { display: block; float: left; width: 20px; height: 20px; margin: 0 5px; margin-top: 5px; }
 .cata-nav .selected .item-left { background: #818c8f; position: relative; z-index: 9; }
-.categorys .cata-nav-name { overflow: hidden; color: #FFF; }
+.categorys .cata-nav-name { overflow: hidden; color: #FFF; height:40px;}
 .categorys .cata-nav-name * { line-height: 30px; }
 .categorys .cata-nav-name a { color: #fff; }
 .categorys .cata-nav-name h3 { font-weight: 400; width: 100%; }
-.categorys .cata-nav-name h3 a { font-size: 13px; display: block; }
+.categorys .cata-nav-name h3 a { font-size: 13px; display: block;line-height: 40px; }
 .cata-nav .selected h3 a, .cata-nav .selected h3 { color: #fff; }
 .categorys .cata-nav-name span a { font-size: 12px; display: inline-block; float: left; }
 /*3级菜单*/
@@ -108,7 +108,7 @@ overflow: hidden; background: #fff; }
 .cata-nav-layer .sub-logo-con img { width: 100px; height: 50px;vertical-align:bottom; display:block; border-bottom:1px solid #fafafa; }
 .cata-nav-layer dl { width: 220px; float: left; margin: 0 16px; }
 .cata-nav-layer dl dt { width: 100%; font-size: 12px; color: #333; line-height: 30px; border-bottom: 1px #e5e5e5 solid; font-style: normal; font-variant: normal; font-weight: 700; float: left; font-size-adjust: none; font-stretch: normal; }
-.cata-nav-layer dl dd { width: 100%; line-height:30px; padding:8px 0; overflow: hidden; color: #666; }
+.cata-nav-layer dl dd { width: 100%; line-height:30px; padding:8px 0; /*overflow: hidden;*/ color: #666; }
 .cata-nav-layer dl dd a { float: left; color: #666; font-size: 12px; white-space: nowrap; }
 .cata-nav-layer dl dd a:hover { color: #ff4c50; }
 .cata-nav-layer dl dd span { float: left;  margin:0 3px;}

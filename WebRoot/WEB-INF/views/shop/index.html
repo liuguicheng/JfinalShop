@@ -1,98 +1,212 @@
 <!doctype html>
 <html class="no-js fixed-layout">
 <head>
-<% include("/common/shop_head.html"){}%>
-<script type="text/javascript">
-  $(function(){
-    $('.category-sort').bind({mouseover:function(){
-        $(this).children('.category-detail').removeClass("am-hide").show();
-      },mouseout:function(){
-        $(this).children('.category-detail').hide();
-      }
-    });
-  });
-</script>
+    <% include("/common/shop_head.html"){}%>
+    <!--index-->
+    <link href="${base}/statics/jfg_qt/css/index.css" rel="stylesheet" type="text/css">
+    <script src="${base}/statics/jfg_qt/js/index.js"></script>
+    <!--banner-->
+    <link rel="stylesheet" type="text/css" href="${base}/statics/jfg_qt/css/flexslider.css">
+    <script src="${base}/statics/jfg_qt/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.category-sort').bind({
+                mouseover: function () {
+                    $(this).children('.category-detail').removeClass("am-hide").show();
+                }, mouseout: function () {
+                    $(this).children('.category-detail').hide();
+                }
+            });
+            <!--banner-->
+            $('.flexslider').flexslider({
+                animation: "slide",
+                slideshowSpeed: 4000,
+                directionNav: true,
+                controlNav: true,
+            });
+            <!--banner-->
+        });
+    </script>
 </head>
 <body>
 <%include("/shop/header.html"){}%>
 <div class="am-cf shop-main">
-  <!-- content start -->
-  <div class="shop-content">
-    <div class="shop-content-body">
-      <div class="am-g">
-        <div class="am-u-sm-12 am-u-md-12 am-u-lg-8 am-padding-horizontal-xs">
-          <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
-            <ul class="am-slides">
-              <%for(list in systemConfig.bannerImagePathList){%>
-              <li><img src="${base}${list}" /></li>
-              <%}%>
-              <%if (systemConfig.bannerImagePathList! == null || systemConfig.bannerImagePathList.~size == 0){%>
-              <li><img src="${base}/statics/img/upload/default_banner.png" /></li>
-              <%}%>
+    <!-- content start -->
+    <div class="shop-content">
+        <div class="banner">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li> <img src="${base}/statics/jfg_qt/images/ad.jpg" /> </li>
+                    <li> <img src="${base}/statics/jfg_qt/images/ad.jpg" /> </li>
+                    <li> <img src="${base}/statics/jfg_qt/images/ad.jpg" /> </li>
+                    <li> <img src="${base}/statics/jfg_qt/images/ad.jpg" /> </li>
+                    <li> <img src="${base}/statics/jfg_qt/images/ad.jpg" /> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="shop-content-body">
+            <!--优惠信息-->
+            <ul class="preferential">
+                <li><a href="#"><img src="${base}/statics/jfg_qt/images/preferential_12.png"></a></li>
+                <li><a href="#"><img src="${base}/statics/jfg_qt/images/preferential_14.png"></a></li>
+                <li><a href="#"><img src="${base}/statics/jfg_qt/images/preferential_16.png"></a></li>
+                <li><a href="#"><img src="${base}/statics/jfg_qt/images/preferential_18.png"></a></li>
             </ul>
-          </div>
+
+            <!--每日新货-->
+            <div class="layer" id="mrxh">
+                <div class="indexTitle">
+                    <p>每日新货</p>
+                    <a href="#">更多好货&gt;</a></div>
+                <ul class="newProduct">
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_03.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_05.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_07.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_09.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_05.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                </ul>
+                <ul class="newProduct">
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_03.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_05.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_07.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_09.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                    <li><img src="${base}/statics/jfg_qt/images/newProduct_05.png"> <a href="#">MICHAEL KORS迈克高仕</a> <i>美式轻奢典范</i> <b>4.5折</b>
+                        <p>¥1799<span>¥4000</span></p>
+                    </li>
+                </ul>
+            </div>
+
+            <!--精品区-->
+            <div class="layer" id="jpq">
+                <div class="indexTitle">
+                    <p>精品区</p>
+                    <a href="#">更多好货&gt;</a></div>
+                <div class="delicateBox">
+
+                    <div class="delicateAD">
+                        <div><img src="${base}/statics/jfg_qt/images/ad.jpg"></div>
+                        <ul class="delicate">
+                            <li><a href="#"> <img src="${base}/statics/jfg_qt/images/delicate_26.png"> </a></li>
+                            <li><a href="#"> <img src="${base}/statics/jfg_qt/images/delicate_29.png"></a></li>
+                            <li><a href="#"> <img src="${base}/statics/jfg_qt/images/delicate_32.png"></a></li>
+                        </ul>
+                    </div>
+
+                    <!--最新热卖-->
+                    <div class="HotLayer">
+                        <div class="HotTitle">最新热卖</div>
+                        <div class="HotBox">
+                            <div class="HotAnimate">
+                                <ul class="Hot">
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_27.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_34.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_38.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_42.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="Hot">
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_27.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_34.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_38.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_42.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="Hot">
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_27.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_34.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_38.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                    <li><img src="${base}/statics/jfg_qt/images/hot_42.png">
+                                        <div class="HotTxt"><a href="#">Avene 雅漾 舒护活泉水喷雾 300毫升 大喷</a>
+                                            <p>¥86<span>¥185</span></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="HotBtn">
+                            <li>
+                                <p>●</p>
+                            </li>
+                            <li>
+                                <p>●</p>
+                            </li>
+                            <li>
+                                <p>●</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--底部广告-->
+            <div class="tailAD"><img src="${base}/statics/jfg_qt/images/ad_47.png"></div>
+
+
+           <!-- <%include("/shop/friend_link.html"){}%>-->
         </div>
-        <div class="am-u-lg-4">
-          <ol class="am-breadcrumb am-breadcrumb-slash am-margin-bottom-xs">
-            <li class="am-active"><span class="am-icon-cart-plus">新品上架</span></li>
-          </ol>
-          <ul class="am-avg-sm-3 am-avg-md-9 am-avg-lg-4 am-thumbnails">
-            <%for(list in newProductList){%>
-            <li><a href="${base}${list.htmlFilePath}"><img class="am-thumbnail" src="${base}${list.productImageList[0].thumbnailProductImagePath!systemConfig.defaultThumbnailProductImagePath}" alt="${list.name}" /></a></li>
-            <%if(listLP.index == 8){%>
-            <%break;%>
-            <%}%>
-            <%}%>
-          </ul>
-        </div>
-      </div>
-          
-      <div class="am-panel am-panel-secondary">
-        <div class="am-panel-hd">
-          <ol class="am-breadcrumb am-breadcrumb-slash am-padding-0 am-margin-0">
-            <li class="am-active"><span class="am-icon-trophy"> </span>热卖商品</li>
-          </ol>
-        </div>
-        <div class="am-panel-bd">
-          <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-5 am-thumbnails">
-            <%for(list in hotProductList){%>
-            <li>
-              <a href="${base}${list.htmlFilePath}">
-                <img class="am-thumbnail am-radius am-margin-bottom-0" src="${base}${list.productImageList[0].smallProductImagePath!systemConfig.defaultSmallProductImagePath}" />
-                <p class="am-kai am-text-sm am-text-center am-text-truncate am-margin-0">${list.name}</p>
-                <p class="am-monospace am-text-danger am-text-center am-margin-0">${list.price,priceCurrencyFormat}</p>
-              </a>
-            </li>
-            <%}%>
-          </ul>
-        </div>
-      </div>
-          
-      <div class="am-panel am-panel-success">
-        <div class="am-panel-hd">
-          <ol class="am-breadcrumb am-breadcrumb-slash am-padding-0 am-margin-0">
-            <li class="am-active"><span class="am-icon-thumbs-up"> </span>精品推荐</li>
-          </ol>
-        </div>
-        <div class="am-panel-bd">
-          <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-5 am-thumbnails">
-            <%for(list in bestProductList){%>
-            <li>
-              <a href="${base}${list.htmlFilePath}">
-                <img class="am-thumbnail am-margin-bottom-0" src="${base}${list.productImageList[0].smallProductImagePath!systemConfig.defaultSmallProductImagePath}" />
-                <p class="am-kai am-text-sm am-text-center am-text-truncate am-margin-0">${list.name}</p>
-                <p class="am-monospace am-text-danger am-text-center am-margin-0">${list.price,priceCurrencyFormat}</p>
-              </a>
-            </li>
-            <%}%>
-          </ul>
-        </div>
-      </div>
-      <%include("/shop/friend_link.html"){}%>
+        <%include("/shop/footer.html"){}%>
     </div>
-    <%include("/shop/footer.html"){}%>
-  </div>
-  <!-- content end -->
+    <!-- content end -->
 </div>
 </body>
 </html>

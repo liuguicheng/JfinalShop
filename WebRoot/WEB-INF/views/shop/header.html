@@ -265,9 +265,6 @@ $(function() {
           <div class="wrap">
             <dl>
               <dd><a href="#" >收藏的商品（0）</a></dd>
-              <dd><a href="#" >收藏的商品（0）</a></dd>
-              <dd><a href="#" >收藏的商品（0）</a></dd>
-              <dd><a href="#" >收藏的商品（0）</a></dd>
             </dl>
           </div>
         </dd>
@@ -323,89 +320,57 @@ $(function() {
       <!--二级导航-->
       <div class="dd" style="display:none">
         <div class="cata-nav" id="cata-nav">
+          <%if (rootProductCategoryList! != null && rootProductCategoryList.~size > 0){%>
+          <%for(list in rootProductCategoryList){%>
           <div class="item fore1">
             <div class="item-left">
               <div class="cata-nav-name">
-                <h3><i><img src="${base}/statics/jfg_qt/images/c.png"></i> <a href="产品列表.html" target="iframemain">生鲜食品、冷藏冷冻</a> </h3>
+                <h3><i><img src="${base}/statics/jfg_qt/images/c.png"></i> <a href="${base}/shop/product/list?id=${list.id}" target="iframemain">${list.name}</a> </h3>
               </div>
             </div>
              <!--加三级菜单-->
+            <%var childrenList = list.children;%>
+            <%if (childrenList != null && childrenList.~size > 0){%>
+
             <div class="cata-nav-layer">
               <div class="CategoryMenuPannel">
                 <div class="height20"></div>
+                <%for(c1_List in childrenList){%>
+                <%var childrenList2 = c1_List.children;%>
+                <%if (childrenList2 != null && childrenList2.~size > 0){%>
                 <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
+                  <dt><a href="${base}/shop/product/list?id=${c1_List.id}">${c1_List.name}</a></dt>
+                  <%var ids =1;%>
+                  <%for(c2_List in childrenList2){%>
+                  <% ids =ids+1;%>
+                  <dd><a href="${base}/shop/product/list?id=${c2_List.id}">${c2_List.name}</a><%if (ids== childrenList2.~size){%><span>|</span><%}%></dd>
+                  <%}%>
                 </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#" class="red">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#"  class="red">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#" >面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#"  class="red">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#"  class="red">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#" class="red">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#"  class="red">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#" >面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#"  class="red">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#"  class="red">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#"  class="red">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <div class="height10"></div>
+                <%}%>
+                <%}%>
+               <!-- <div class="height10"></div>-->
               </div>
-              <div class="sub-logo-con">
+              <!--<div class="sub-logo-con">
                 <div class="height30"></div>
                 <ul>
                   <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
                 </ul>
                 <div class="height30"></div>
+              </div>-->
+            </div>
+            <%}%>
+            <!--加三级菜单 end-->
+          </div>
+          <%}%>
+          <%}else{%>
+          <div class="item fore1">
+            <div class="item-left">
+              <div class="cata-nav-name">
+                <h3><i><img src="${base}/statics/jfg_qt/images/c.png"></i> 暂无分类 </h3>
               </div>
             </div>
-            <!--加三级菜单 end--> 
           </div>
+          <%}%>
         </div>
       </div>
     </div>
