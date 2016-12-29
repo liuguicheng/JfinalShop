@@ -6,10 +6,28 @@ import com.jfinal.aop.Clear;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
 
-
 /**
- * 前台类 - 首页
- * 
+ *  前台类 - 首页
+ * @author lgc
+ * ━━━━━━神兽出没━━━━━━ 
+ * 　　　┏┓　　　┏┓ 
+ * 　　┏┛┻━━━┛┻┓ 
+ * 　　┃　　　　　　　┃ 
+ * 　　┃　　　━　　　┃ 
+ * 　　┃　┳┛　┗┳　┃ 
+ * 　　┃　　　　　　　┃ 
+ * 　　┃　　　┻　　　┃ 
+ * 　　┃　　　　　　　┃ 
+ * 　　┗━┓　　　┏━┛  
+ * 　　　　┃　　　┃    
+ * 　　　　┃　　　┃ 
+ * 　　　　┃　　　┗━━━┓ 
+ * 　　　　┃　　　　　　　┣┓ 
+ * 　　　　┃　　　　　　　┏┛ 
+ * 　　　　┗┓┓┏━┳┓┏┛ 
+ * 　　　　　┃┫┫　┃┫┫ 
+ * 　　　　　┗┻┛　┗┻┛ 
+ *━━━━━━永无bug━━━━━━
  */
 @ControllerBind(controllerKey = "/")
 public class IndexController extends Controller{

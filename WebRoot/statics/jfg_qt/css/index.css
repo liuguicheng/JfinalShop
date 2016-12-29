@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ padding:0; margin:0; list-style:none; text-decoration:none; font-family:'微软雅黑';}
+body{ background:#f5f5f5;}
+img{ border:none;}
+
+
+
+/*优惠信息*/
+.preferential{ width:1090px; margin:17px auto; overflow:hidden;}
+.preferential li{ margin-left:10px; float:left;}
+.preferential li:first-child{  margin-left:0;}
+
+/*楼层*/
+.layer{ width:1090px; margin:0 auto; margin-bottom:20px; overflow:hidden;}
+.indexTitle{ overflow:hidden; border-bottom:2px solid #333;}
+.indexTitle p{ float:left; line-height:35px; color:#333; font-size:22px; font-weight:bold;}
+.indexTitle a{ float:right; line-height:46px; font-size:12px; color:#666; margin-right:6px;}
+
+/*每日新货*/
+.newProduct{ background:#fff; overflow:hidden; border-left:1px solid #eaeaea;}
+.newProduct>li{ float:left; width:186px; padding:13px 15px; border-bottom:1px solid #eaeaea; border-right:1px solid #eaeaea;}
+.newProduct>li:last-child{ width:190px;}
+.newProduct img{ display:block; width:186px; height:186px; margin-bottom:10px;}
+.newProduct a{ font-size:12px; color:#333; line-height:18px; display:block;}
+.newProduct i{ font-style:normal; display:block; line-height:18px; font-size:12px; color:#333; margin-bottom:10px;}
+.newProduct b{ font-weight:normal; border:1px dotted #e31436; font-size:12px; color:#e31436; padding:0 4px; line-height:20px;}
+.newProduct p{ font-size:12px; font-weight:bold; color:#e31436; font-weight:bold; margin-top:10px;}
+.newProduct p span{ font-size:10px; color:#999999; text-decoration:line-through; font-weight:normal; padding-left:3px;}
+
+/*精品区*/
+.delicateBox{ background:#fff; overflow:hidden; height:440px; overflow:hidden; border:1px solid #eaeaea; border-top:none;}
+.delicateAD{  width:855px; overflow:hidden; float:left;}
+.delicateAD img{ display:block; width:855px; height:260px; border-bottom:1px solid #000; padding-bottom:5px;}
+.delicate{ overflow:hidden;}
+.delicate li{  float:left; width:284px; border-right:1px solid #eaeaea; height:180px; /*border-bottom:1px solid #eaeaea;*/ overflow:hidden;}
+/*.delicate a{ display:block; font-size:16px; color:#333; line-height:24px; margin-top:18px; text-align:center;}
+.delicate span{ text-align:center; display:block; color:#666; line-height:22px; font-size:12px; margin-bottom:3px; }*/
+.delicate img{ display:block; margin:0 auto; width:240px; height:160px; margin-top:0px; transition:all .5s; border-bottom:none;}
+.delicate li:hover img{ margin-top:0;}
+
+/*最新热卖*/
+.HotLayer{ width:200px; float:right; margin-right:24px; margin-top:8px; position:relative; padding-bottom:16px;}
+.HotTitle{ line-height:43px; font-size:16px; color:#333;}
+.HotBox{ width:200px; height:365px; overflow:hidden; position:relative;}
+.HotAnimate{ width:600px; position:absolute; left:0; top:0;}
+.Hot{ float:left; }
+.Hot>li{ border-bottom:1px dotted #eaeaea; overflow:hidden; padding-bottom:10px; margin-bottom:10px;}
+.Hot img{ display:block; width:73px; height:73px; float:left;}
+.HotTxt{ float:left; width:115px; margin-left:12px;}
+.HotTxt a{ line-height:16px; color:#666; font-size:12px;}
+.HotTxt p{ line-height:28px; color:#e31436; font-weight:bold; font-size:14px;}
+.HotTxt p span{ font-weight:normal; font-size:12px; color:#999; padding-left:6px;}
+.HotBtn{ position:absolute; text-align:center; bottom:0; overflow:hidden; width:100%;}
+.HotBtn li{ display:inline-block; margin:0 2px; font-size:20px; color:#e1e1e1; cursor:pointer;}
+.HotBtnClick{ color:#333;}
+
+/*底部广告*/
+.tailAD{ width:1090px; margin:0 auto; margin-bottom:29px; margin-top:29px; overflow:hidden;}

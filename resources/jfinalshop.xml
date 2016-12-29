@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <jfinalshop>
-	<description>JFinalShop配置文件</description>
+	<description>积分购商城配置文件</description>
 	<systemConfig>
-		<systemName>JFinalShop</systemName>
+		<systemName>积分购商城</systemName>
 		<systemVersion>V1.0</systemVersion>
-		<systemDescription>JFinalShop是使用JFinal、AmazeUI等开发的开源网店系统。</systemDescription>
+		<systemDescription>积分购商城</systemDescription>
 		<isInstalled>true</isInstalled>
-		<shopName>JFinalShop商城</shopName>
-		<shopUrl>http://www.jfinalshop.com</shopUrl>
-		<shopLogo>/statics/img/upload/logo.png</shopLogo>
+		<shopName>积分购商城</shopName>
+		<shopUrl>http://www.baidu.com</shopUrl>
+		<shopLogo>/statics/jfg/img/logo.png</shopLogo>
 		<hotSearch>电子书,生活电器,电脑配件</hotSearch>
-		<metaKeywords>JFinalShop商城</metaKeywords>
-		<metaDescription>JFinalShop是使用JFinal、AmazeUI等开发的开源网店系统。</metaDescription>
-		<address>中国·杭州</address>
+		<metaKeywords>积分购商城</metaKeywords>
+		<metaDescription>积分购商城</metaDescription>
+		<address>中国·南宁</address>
 		<phone>400-8888888</phone>
 		<zipCode>310000</zipCode>
-		<email>jfinalshop@foxmail.com</email>
+		<email>282303392@qq.com</email>
 		<currencyType>CNY</currencyType>
 		<currencySign>￥</currencySign>
 		<currencyUnit>元</currencyUnit>
@@ -24,7 +24,7 @@
 		<priceRoundType>roundHalfUp</priceRoundType>
 		<orderScale>2</orderScale>
 		<orderRoundType>roundHalfUp</orderRoundType>
-		<certtext>杭ICP备00000000号</certtext>
+		<certtext>桂ICP备00000000号</certtext>
 		<storeAlertCount>5</storeAlertCount>
 		<storeFreezeTime>order</storeFreezeTime>
 		<uploadLimit>15360</uploadLimit>
@@ -47,13 +47,13 @@
 		<allowedUploadImageExtension>jpg,jpge,bmp,gif,png</allowedUploadImageExtension>
 		<allowedUploadMediaExtension />
 		<allowedUploadFileExtension />
-		<smtpFromMail>jfinalshop@139.com</smtpFromMail>
+		<smtpFromMail>282303392@139.com</smtpFromMail>
 		<smtpHost>smtp.139.com</smtpHost>
 		<smtpPort>25</smtpPort>
-		<smtpUsername>jfinalshop@139.com</smtpUsername>
-		<smtpPassword>JfinalShop_2016</smtpPassword>
+		<smtpUsername>282303392@139.com</smtpUsername>
+		<smtpPassword>282303392</smtpPassword>
 		<pointType>productSet</pointType>
 		<pointScale>1</pointScale>
-		<bannerImagePath></bannerImagePath>
+		<bannerImagePath>/statics/jfg/img/ad.jpg</bannerImagePath>
 	</systemConfig>
 </jfinalshop>

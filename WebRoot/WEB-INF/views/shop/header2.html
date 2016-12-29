@@ -245,186 +245,121 @@ $(function() {
 </div>
 <!-- 注册协议 end -->
 <!-- 顶部操作栏和logo、搜索 start -->
-<!--2F-->
-<div id="site_nav">
-  <div class="site_nav_box">
-    <ul class="login">
-      <li>欢迎您！</li>
-      <li><a href="#" class="link-login">请登录</a></li>
-      <li><span>|</span></li>
-      <li><a href="#" class="link-regist">注册</a></li>
-    </ul>
-    <ul class="fr">
-      <li><a href="#">我的订单</a></li>
-      <li><span>|</span></li>
-      <li class="dorpdown">
-        <dt class="sc-icon">
-          <div class="sc-choie">个人中心<span class="xiangxia"></span></div>
-        </dt>
-        <dd class="dorpdown-layer">
-          <div class="wrap">
-            <dl>
-              <dd><a href="#" >收藏的商品（0）</a></dd>
-              <dd><a href="#" >收藏的商品（0）</a></dd>
-              <dd><a href="#" >收藏的商品（0）</a></dd>
-              <dd><a href="#" >收藏的商品（0）</a></dd>
-            </dl>
-          </div>
-        </dd>
-      </li>
-      <li><span>|</span></li>
-      <li><a href="#">服务热线：400-123456789</a></li>
-      <li><span>|</span></li>
-      <li class="dorpdown">
-        <dt class="sc-icon">
-          <div class="sc-choie">客服服务<span class="xiangxia"></span></div>
-        </dt>
-        <dd class="dorpdown-layer">
-          <div class="wrap">
-            <dl>
-              <dd><a href="#" >收藏的商品（0）</a></dd>
-            </dl>
-          </div>
-        </dd>
-      </li>
-    </ul>
+<div class="shop-header">
+<div class="am-panel am-panel-default am-margin-bottom-0">
+  <div class="am-panel-hd am-kai am-text-xs am-padding-vertical-0 am-padding-horizontal-xl am-cf">
+    <div class="am-fl">
+      <span class="am-fl">您好&nbsp;</span><span id="headerLoginMemberUsername" class="am-text-warning am-fl"></span><span class="am-hide-sm-only am-fl">,欢迎来到${systemConfig.shopName!}!</span>
+  	<a href="javascript:void(0);" id="headerShowLoginWindow">[登  录]</a>
+  	<a href="${base}/memberCenter" id="headerMemberCenter">[会员中心]</a>
+  	<a href="javascript:void(0);" id="headerShowRegisterWindow">[注  册]</a>
+  	<a href="${base}/memberCenter/logout" id="headerLogout">[退  出]</a>
+    </div>
+    <div class="am-fr am-hide-sm-only">
+      <%for(list in topNavigationList!){%>          
+      <a href="${base}${list.url}" <%if (list.isBlankTarget == true){%> target="_blank"<%}%>>${list.name!}</a>
+      <%if (!listLP.last){%>|<%}%>
+      <%}%>
+    </div>   
   </div>
-</div>
-<!--3F-->
-<div class="header">
-<div class="header_box">
-  <div class="logo fl"><img src="${base}${systemConfig.shopLogo!}"></div>
-  <ul class="search_box fl">
-    <li>
-      <div class="search"> <span class="ipt1">
-        <input type="text" value="">
-        </span> <span class="ipt2">
-        <input type="submit" value=" ">
-        </span> </div>
-    </li>
-    <li>
-     		<%for(list in systemConfig.hotSearchList){%>
-            <a href="${base}/shop/product/search?keyword=${list}">${list} </a>|
-            <%}%>
-    </li>
-  </ul>
-  <ul class="cart_info">
-    <li>
-      <div class="top_cart"> <span class="carts_num"><a href="#" >2</a></span> <a href="#" class="shopborder">购物车</a> </div>
-    </li>
-  </ul>
-</div>
-</div>
-<div class="clear"></div>
-<div class="nav">
-  <div class="nav_box">
-    <div class="categorys categorysshow">
-      <div class="dt"><i class="icon"><img src="${base}/statics/jfg_qt/images/c.png"></i><a href="#" target="_blank">全部商品分类</a></div>
-      <!--二级导航-->
-      <div class="dd" style="display:none">
-        <div class="cata-nav" id="cata-nav">
-          <div class="item fore1">
-            <div class="item-left">
-              <div class="cata-nav-name">
-                <h3><i><img src="${base}/statics/jfg_qt/images/c.png"></i> <a href="产品列表.html" target="iframemain">生鲜食品、冷藏冷冻</a> </h3>
-              </div>
-            </div>
-             <!--加三级菜单-->
-            <div class="cata-nav-layer">
-              <div class="CategoryMenuPannel">
-                <div class="height20"></div>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#" class="red">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#"  class="red">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#" >面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#"  class="red">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#"  class="red">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#" class="red">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#"  class="red">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#" >面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#"  class="red">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#"  class="red">面膜</a><span>|</span><a href="#">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#"  class="red">口腔护理</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="#">环球购</a></dt>
-                  <dd><a href="#">面部护肤</a><span>|</span><a href="#">面膜</a><span>|</span><a href="#"  class="red">冰纷彩妆</a><span>|</span><a href="#">洗浴用品</a><span>|</span><a href="#">口腔护理</a></dd>
-                </dl>
-                <div class="height10"></div>
-              </div>
-              <div class="sub-logo-con">
-                <div class="height30"></div>
-                <ul>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                  <li><a href="#"><img src="${base}/statics/jfg_qt/images/brand1.jpg"></a></li>
-                </ul>
-                <div class="height30"></div>
-              </div>
-            </div>
-            <!--加三级菜单 end--> 
+  <div class="am-panel-bd am-padding-0">
+    <div class="am-g">
+      <div class="am-hide-sm-only am-u-md-4 am-u-lg-4 am-vertical-align" style="height:70px;">
+        <img class="am-vertical-align-middle" src="${base}${systemConfig.shopLogo!}" title="${systemConfig.shopName!}">
+      </div>
+      <div class="am-u-sm-12 am-u-md-5 am-u-lg-4 shop-margin-vertical">
+        <form id="productSearchForm" action="${base}/shop/product/search" method="get" data-am-validator>
+        <div class="am-g">
+          <div class="am-u-sm-12 am-input-group am-input-group-sm am-input-group-primary">
+            <input type="text" id="productSearchKeyword" name="keyword" class="am-form-field" placeholder="请输入关键词..." value="${keyword!}" required>
+            <span class="am-input-group-btn">
+              <button class="am-btn am-btn-primary" type="submit"><span class="am-icon-search"></span></button>
+            </span>
           </div>
+          <div class="am-u-sm-12 am-text-xs">
+            热门关键词: 
+            <%for(list in systemConfig.hotSearchList){%>
+            <a href="${base}/shop/product/search?keyword=${list}">${list} </a>
+            <%}%>
+          </div>
+        </div>
+        </form>
+      </div>
+      <div class="am-show-lg-only am-u-lg-4 am-text-right am-vertical-align" style="height:64px;">
+        <div class="am-text-sm am-vertical-align-middle">
+          7×24小时服务热线：<strong>${systemConfig.phone!}</strong>
         </div>
       </div>
     </div>
-    <div class="navitems" id="nav">
-      <ul>
-      <% var i=0;%>
-      <%for(list in middleNavigationList){i++;%>
-      <%if(i==1){%>
-      <li class="active">
-         <a href="${base}${list.url}"<%if (list.isBlankTarget == true){%> target="_blank"<%}%>>${list.name}</a>
+  </div>
+</div>
+<!-- 顶部操作栏和logo、搜索 end -->
+<!-- 导航 start -->
+<header class="am-topbar am-margin-bottom-0">
+  <%if (rootProductCategoryList! != null && rootProductCategoryList.~size > 0){%>
+  <div class="am-topbar-brand am-dropdown" data-am-dropdown>
+    <button class="am-btn am-btn-default am-btn-sm am-dropdown-toggle" data-am-dropdown-toggle>全部商品分类 <span class="am-icon-caret-down"></span></button>
+    <ul class="am-dropdown-content am-text-sm">
+      <%for(list in rootProductCategoryList){%>
+      <li><a href="${base}/shop/product/list?id=${list.id}"><span class="am-icon-list am-margin-right-xs"> </span>${list.name}</a></li>
+      <%var childrenList = list.children;%>
+      <%if (childrenList != null && childrenList.~size > 0){%>
+      <li class="am-divider-dashed"></li>
+      <%for(c1_List in childrenList){%>
+      <li class="category-sort am-kai">
+        <a href="${base}/shop/product/list?id=${c1_List.id}"><span class="am-icon-hand-o-right am-margin-right-xs"> </span>${c1_List.name}</a>
+        <%var childrenList2 = c1_List.children;%>
+        <%if (childrenList2 != null && childrenList2.~size > 0){%>
+        <div class="category-detail am-text-xs am-margin-vertical-xs am-hide">
+          <%for(c2_List in childrenList2){%>
+          <a href="${base}/shop/product/list?id=${c2_List.id}" class="am-badge am-badge-secondary am-margin-left-xs am-round">${c2_List.name}</a>
+          <%}%>
+        </div>
+        <%}%>
       </li>
-      <%}else{%>
-      <li >
+      <%if (c1_ListLP.index != childrenList.~size){%> 
+      <li class="am-divider-dashed"></li>
+      <%}%>
+      <%}%>
+      <%}%>
+      <%if (listLP.index != rootProductCategoryList.~size){%> 
+      <li class="am-divider"></li>
+      <%}%>
+      <%}%>
+    </ul>
+  </div>
+  <%}else{%>
+  <h1 class="am-topbar-brand">
+    &nbsp;
+  </h1>
+  <%}%>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav">
+      <%for(list in middleNavigationList){%>
+      <li>
          <a href="${base}${list.url}"<%if (list.isBlankTarget == true){%> target="_blank"<%}%>>${list.name}</a>
       </li>
       <%}%>
-      <%}%>
-      </ul>
+    </ul>
+    <!-- 
+    <div class="am-topbar-right">
+      <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
+        <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle" data-am-dropdown-toggle>其他 <span class="am-icon-caret-down"></span></button>
+        <ul class="am-dropdown-content">
+          <li><a href="#">注册</a></li>
+          <li><a href="#">随便看看</a></li>
+        </ul>
+      </div>
+    </div>
+     -->
+
+    <div class="am-topbar-right">
+      <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="window.open('${base}/shop/cartItem/list')"><span class="am-icon-shopping-cart am-margin-right-xs"></span>购物车</button>
     </div>
   </div>
+</header>
 </div>
 <!-- 导航 end -->
